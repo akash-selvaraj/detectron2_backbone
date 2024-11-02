@@ -7,7 +7,7 @@
 
 First install Detectron2 following the official guide: [INSTALL.md](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md). Then build detectron2_backbone with:
 ```
-git clone https://github.com/sxhxliang/detectron2_backbone.git
+git clone https://github.com/akash-selvaraj/detectron2_backbone.git
 cd detectron2_backbone
 python setup.py build develop
 ```
