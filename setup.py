@@ -24,7 +24,7 @@ setup(
     author="Shihua Liang",
     url="https://github.com/sxhxliang/detectron2_backbone",
     description="backbone for detectron2",
-    packages=["detectron2_backbone"],
+    packages=find_packages(),  # Automatically includes all subpackages
     python_requires=">=3.5",
     install_requires=[
         "termcolor>=1.1",
@@ -38,6 +38,11 @@ setup(
         "tqdm>4.29.0",
         "tensorboard",
     ],
+    include_package_data=True,  # Include non-Python files specified in MANIFEST.in or package_data
+    package_data={
+        # Include all relevant files, modify as necessary for other file types
+        "detectron2_backbone": ["*.py", "*.json", "*.yaml", "*.md"],
+    },
     # extras_require={"all": ["shapely", "psutil"]},
     # ext_modules=get_extensions(),
     # cmdclass={"build_ext": torch.utils.cpp_extension.BuildExtension},
